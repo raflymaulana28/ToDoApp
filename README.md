@@ -1,7 +1,7 @@
 ## To Do App  
 
 **Stack:**  
-- Create React App  
+Create React App  
  
  **Inspiration:**  
  https://dribbble.com/shots/6581661-To-Do-App-Task-manager-concept  
