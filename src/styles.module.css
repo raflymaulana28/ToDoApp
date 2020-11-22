@@ -1,0 +1,146 @@
+.root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.container {
+  max-width: 27rem;
+  background-color: #5885fa;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.appBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.titleSection {
+  margin-top: 4rem;
+  padding: 0 1.5rem;
+}
+.task {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textOne {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 0rem;
+}
+
+.totalTask {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 0rem;
+}
+
+.boxList {
+  height: 50vh;
+  margin-top: 5rem;
+  background-color: #fff;
+  border-radius: 1rem 1rem 0px 0px;
+  padding: 1rem;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.title {
+  font-size: 1.25rem;
+  line-height: 0rem;
+}
+
+.date {
+  font-size: 1rem;
+  line-height: 0.75rem;
+}
+.divFab {
+  width: 100%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.fabs {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 27rem;
+  width: 100%;
+}
+.buttonFabs {
+  background-color: #5885fa;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* New Task */
+.containerAdd {
+  max-width: 27rem;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+.appBarAdd {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.subBarOne {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.subBarTwo {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.textArea {
+  width: 100%;
+  border: unset;
+  height: 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+.textArea:focus {
+  outline: none;
+}
+.divDate {
+  padding: 1rem;
+}
+.inputDate {
+  width: 100%;
+  border: unset;
+  font-size: 1rem;
+}
+.inputDate:focus {
+  outline: none;
+}
+.buttonCreate {
+  background-color: #5885fa;
+  padding: 1rem;
+  color: white;
+  border: unset;
+  width: 100%;
+  max-width: 27rem;
+  position: fixed;
+  bottom: 0;
+}
