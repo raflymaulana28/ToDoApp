@@ -11,4 +11,4 @@ Create React App
  https://raflymaulana.medium.com/ngereact-eps-1-hello-world-dan-buat-to-do-app-1945b3797798  
    
  **Preview:**  
- 
+ <img src="/preview/preview.gif" alt="preview"/>
