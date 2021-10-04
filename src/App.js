@@ -4,23 +4,23 @@ import styles from "./styles.module.css";
 function App() {
   const [added, setAdded] = useState(false);
   const [todo, setTodo] = useState("");
-  const [data, setData] = useState([]);
+  const [list, setList] = useState([]);
   const [date, setDate] = useState(null);
   const handleChangeDate = (e) => {
     setDate(e.target.value);
   };
 
   useEffect(() => {
-    const datas = JSON.parse(localStorage.getItem("data"));
-    if (datas) {
-      setData(datas);
+    const data = JSON.parse(localStorage.getItem("data"));
+    if (data) {
+      setList(data);
     }
   }, []);
 
   const handleCreate = () => {
-    const datas = { todo, date };
-    setData([...data, datas]);
-    localStorage.setItem("data", JSON.stringify([...data, datas]));
+    const data = { todo, date };
+    setList([...list, data]);
+    localStorage.setItem("data", JSON.stringify([...list, data]));
     setAdded(!added);
   };
 
@@ -77,7 +77,7 @@ function App() {
             <p className={styles.totalTask}>{data?.length} Task</p>
           </div>
           <div className={styles.boxList}>
-            {data?.map((item) => (
+            {list?.map((item) => (
               <div className={styles.list}>
                 <div>
                   <p className={styles.title}>{item?.todo}</p>
@@ -87,11 +87,11 @@ function App() {
                   type="checkbox"
                   onChange={(e) => {
                     if (e.target.value === "on") {
-                      const datas = data.filter(
+                      const data = list.filter(
                         (obj) => obj?.todo !== item?.todo
                       );
-                      setData(datas);
-                      localStorage.setItem("data", JSON.stringify(datas));
+                      setList(data);
+                      localStorage.setItem("data", JSON.stringify(data));
                     }
                   }}
                 />
