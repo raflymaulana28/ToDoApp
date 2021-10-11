@@ -24,6 +24,15 @@ function App() {
     setAdded(!added);
   };
 
+  const handleChecklist = (e, item) => {
+    console.log(e.target.value);
+    if (e.target.value === "on") {
+      const data = list.filter((obj) => obj?.todo !== item?.todo);
+      setList(data);
+      localStorage.setItem("data", JSON.stringify(data));
+    }
+  };
+
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
@@ -74,11 +83,11 @@ function App() {
             <p className={styles.textOne}>
               <b>All</b>
             </p>
-            <p className={styles.totalTask}>{data?.length} Task</p>
+            <p className={styles.totalTask}>{list?.length} Task</p>
           </div>
           <div className={styles.boxList}>
-            {list?.map((item) => (
-              <div className={styles.list}>
+            {list?.map((item, index) => (
+              <div className={styles.list} key={index}>
                 <div>
                   <p className={styles.title}>{item?.todo}</p>
                   <p className={styles.date}>{item?.date}</p>
@@ -86,13 +95,7 @@ function App() {
                 <input
                   type="checkbox"
                   onChange={(e) => {
-                    if (e.target.value === "on") {
-                      const data = list.filter(
-                        (obj) => obj?.todo !== item?.todo
-                      );
-                      setList(data);
-                      localStorage.setItem("data", JSON.stringify(data));
-                    }
+                    handleChecklist(e, item);
                   }}
                 />
               </div>
