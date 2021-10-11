@@ -74,7 +74,7 @@ function App() {
             <p className={styles.textOne}>
               <b>All</b>
             </p>
-            <p className={styles.totalTask}>{data?.length} Task</p>
+            <p className={styles.totalTask}>{list?.length} Task</p>
           </div>
           <div className={styles.boxList}>
             {list?.map((item) => (
